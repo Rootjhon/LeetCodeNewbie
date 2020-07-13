@@ -1,0 +1,3 @@
+# LeetCodeNewbie
+
+> day day up
