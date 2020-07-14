@@ -11,7 +11,7 @@ namespace leetcode
 
         static void Main(string[] args)
         {
-            var tempP = new Intersect_Solution();
+            var tempP = new Solution();
 
             _watch.Start();
             tempP.Intersect_V2(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
