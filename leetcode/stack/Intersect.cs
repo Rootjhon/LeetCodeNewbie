@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace leetcode
 {
@@ -27,8 +26,7 @@ namespace leetcode
     /// </summary>
     public partial class Solution
     {
-        ///316ms;
-        public int[] Intersect_V1(int[] nums1, int[] nums2)
+        public int[] Intersect_v1(int[] nums1, int[] nums2)
         {
             var tempR = nums1.Length > nums2.Length;
             var tempMin = tempR ? nums2 : nums1;
@@ -54,12 +52,12 @@ namespace leetcode
             return tempAnswerIdx.ToArray();
         }
 
-        public int[] Intersect_V2(int[] nums1, int[] nums2)
+        public int[] Intersect_v2(int[] nums1, int[] nums2)
         {
             var tempR = nums1.Length > nums2.Length;
             var tempMin = tempR ? nums2 : nums1;
             var tempMax = tempR ? new List<int>(nums1) : new List<int>(nums2);
-            
+
             var tempAnswerIdx = new List<int>();
             for (int iMi = 0; iMi < tempMin.Length; ++iMi)
             {
