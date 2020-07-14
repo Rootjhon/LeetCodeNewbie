@@ -39,5 +39,33 @@
             }
             return tempCount;
         }
+
+        public int CountNegatives_v2(int[][] grid)
+        {
+            int num = 0;
+            for (int i = 0; i < grid.Length; ++i)
+            {
+                int tempBegin = 0, tempEnd = grid[i].Length, pos = -1;
+                while (tempBegin <= tempEnd)
+                {
+                    int tempMid = tempBegin + ((tempEnd - 1) >> 1);
+                    if (grid[i][tempMid] < 0)
+                    {
+                        pos = tempMid;
+                        tempEnd = tempMid - 1;
+                    }
+                    else
+                    {
+                        tempBegin = tempMid + 1;
+                    }
+                    if (~pos != 0)
+                    {
+                        // pos=-1表示这一行全是>=0的数，不能统计
+                        num += grid[i].Length - pos;
+                    }
+                }
+            }
+            return num;
+        }
     }
 }
