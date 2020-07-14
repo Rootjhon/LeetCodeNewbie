@@ -1,0 +1,13 @@
+sudo: required
+language: csharp
+solution: leetcode.sln
+mono: none
+dotnet: 2.1.502
+script:
+ - dotnet restore
+notifications:
+    email:
+        recipients:
+            - 354888562@qq.com
+        on_success: change
+        on_failure: always
