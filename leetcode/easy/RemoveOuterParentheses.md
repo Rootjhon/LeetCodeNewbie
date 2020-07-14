@@ -12,7 +12,7 @@ URL : https://leetcode-cn.com/problems/remove-outermost-parentheses/
 
 **示例 1：**
 
-```
+```reStructuredText
 输入："(()())(())"
 输出："()()()"
 解释：
@@ -22,7 +22,7 @@ URL : https://leetcode-cn.com/problems/remove-outermost-parentheses/
 
 **示例 2：**
 
-```
+```reStructuredText
 输入："(()())(())(()(()))"
 输出："()()()()(())"
 解释：
@@ -32,7 +32,7 @@ URL : https://leetcode-cn.com/problems/remove-outermost-parentheses/
 
 **示例 3：**
 
-```
+```reStructuredText
 输入："()()"
 输出：""
 解释：

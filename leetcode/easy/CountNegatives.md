@@ -8,7 +8,7 @@ URL: https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix
 
 **示例 1：**
 
-```
+```reStructuredText
 输入：grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
 输出：8
 解释：矩阵中共有 8 个负数。
@@ -16,21 +16,21 @@ URL: https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix
 
 **示例 2：**
 
-```
+```reStructuredText
 输入：grid = [[3,2],[1,0]]
 输出：0
 ```
 
 **示例 3：**
 
-```
+```reStructuredText
 输入：grid = [[1,-1],[-1,-1]]
 输出：3
 ```
 
 **示例 4：**
 
-```
+```reStructuredText
 输入：grid = [[-1]]
 输出：1
 ```

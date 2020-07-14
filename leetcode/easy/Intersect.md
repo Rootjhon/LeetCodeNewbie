@@ -6,14 +6,14 @@ URL: https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
 
 **示例 1：**
 
-```
+```reStructuredText
 输入：nums1 = [1,2,2,1], nums2 = [2,2]
 输出：[2,2]
 ```
 
 **示例 2:**
 
-```
+```reStructuredText
 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 输出：[4,9]
 ```
