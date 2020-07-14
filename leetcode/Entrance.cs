@@ -14,7 +14,7 @@ namespace leetcode
             var tempP = new Intersect_Solution();
 
             _watch.Start();
-            tempP.Intersect_V2(new int[] {4,9,5 },new int[] { 9, 4, 9, 8, 4 });
+            tempP.Intersect_V2(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
             _watch.Stop();
 
             Console.WriteLine(_watch.ElapsedMilliseconds);
