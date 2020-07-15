@@ -25,7 +25,11 @@ namespace leetcode
             //    new int[] { 4, 3, 2, -1 }, new int[] { 3,2,1,-1 }, new int[] { 1,1,-1,-2 }, new int[] { -1, -1, -2, -3 }
             //});
 
-            tempP.IsValid_v1("({})");
+            //tempP.IsValid_v1("({})");
+            //tempP.BackspaceCompare("ab#c", "ad#c");
+            //tempP.BackspaceCompare_v1("ab##", "c#d#");
+            tempP.BackspaceCompare_v1("bxj##tw", "bxj###tw");
+            //tempP.BackspaceCompare_v1("a#c", "t#b");
 
             _watch.Stop();
 
