@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace leetcode
+namespace leetcode.easy
 {
     //v1 和v2 执行效率相差似乎不大，思想不同;
 

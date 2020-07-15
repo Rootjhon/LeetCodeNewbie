@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace leetcode
+namespace leetcode.easy
 {
     public partial class Solution
     {

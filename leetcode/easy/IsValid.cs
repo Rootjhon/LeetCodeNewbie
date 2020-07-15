@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace leetcode
+namespace leetcode.easy
 {
     public partial class Solution
     {
