@@ -48,5 +48,6 @@ URL : https://leetcode-cn.com/problems/backspace-string-compare/
 
 
 
+### 情景扩展
 
-
+要求编写一个指令过滤器，业务情景：在同一帧内会被添加若干指令，其中分为 执行类、撤销类。在下一帧会执行指令缓冲，要求指令缓冲中都为有效执行类指令。
