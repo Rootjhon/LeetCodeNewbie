@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using leetcode.easy;
+using leetcode.Medium;
 
 namespace leetcode
 {
@@ -29,25 +29,27 @@ namespace leetcode
             //tempP.IsValid_v1("({})");
             //tempP.BackspaceCompare("ab#c", "ad#c");
             //tempP.BackspaceCompare_v1("ab##", "c#d#");
-            tempP.BackspaceCompare_v1("bxj##tw", "bxj###tw");
+            //tempP.BackspaceCompare_v1("bxj##tw", "bxj###tw");
             //tempP.BackspaceCompare_v1("a#c", "t#b");
 
             //binarySearch(new int[] { 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 3, 4 }, 7);
 
-            MinStack minStack = new MinStack();
-            //minStack.Push(-2);
-            //minStack.Push(0);
-            //minStack.Push(-3);
-            minStack.Push(2147483646);
-            minStack.Push(2147483646);
-            minStack.Push(2147483647);
-            minStack.Pop();
-            minStack.Pop();
-            minStack.Pop();
-            minStack.Push(2147483647);
-            minStack.Push(-2147483648);
-            minStack.Pop();
-            minStack.GetMin();
+            //MinStack minStack = new MinStack();
+            ////minStack.Push(-2);
+            ////minStack.Push(0);
+            ////minStack.Push(-3);
+            //minStack.Push(2147483646);
+            //minStack.Push(2147483646);
+            //minStack.Push(2147483647);
+            //minStack.Pop();
+            //minStack.Pop();
+            //minStack.Pop();
+            //minStack.Push(2147483647);
+            //minStack.Push(-2147483648);
+            //minStack.Pop();
+            //minStack.GetMin();
+
+            tempP.DetectCycle_test();
 
             _watch.Stop();
 
