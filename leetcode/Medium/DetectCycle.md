@@ -75,7 +75,9 @@ URL : https://leetcode-cn.com/problems/linked-list-cycle-ii/
 
 ![UySDEQ.png](https://s1.ax1x.com/2020/07/17/UySDEQ.png) 
 
+简答来说，从慢指针到环的入口就是快指针在环内多走的那部分路程，因此一个头部指针到一直往下走(**步长为1**)，另一个从相遇点继续往前走(**步长为1**)，相遇点就是环的入口了。
 
+> 步长不为1可以吗？当然不行啊，可能会错过，因为你不知道走到了路程b；如果错过后的相遇点就不是环的入口了
 
 ![UySOKK.gif](https://s1.ax1x.com/2020/07/17/UySOKK.gif) 
 
