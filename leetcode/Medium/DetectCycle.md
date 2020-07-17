@@ -1,3 +1,5 @@
+
+
 ### 环形链表 II
 
 URL : https://leetcode-cn.com/problems/linked-list-cycle-ii/
@@ -48,5 +50,32 @@ URL : https://leetcode-cn.com/problems/linked-list-cycle-ii/
 
 ### 题解
 
+#### **HashSet** 
 
+> 常规暴力解法
+
+#### **Floyd 算法**
+
+> 追及问题
+
+想象一下，两个人在圆形操场，A走路，B跑步，那么B与A会在某一时刻再次相遇。
+
+因此，问题分解为两步
+
+		 - 环的判断
+		 - 环的入口
+
+<img src="https://pic.leetcode-cn.com/ea37804a3d86a51a1bf827b9068e1f515ffddf840a0563ea0d1174c58ac64352-image.png" style="zoom:50%;" /> 
+
+给定阶段 1 找到的相遇点，阶段 2 将找到环的入口。首先我们初始化额外的两个指针： ptr1 ，指向链表的头， ptr2 指向相遇点。然后，我们每次将它们往前移动一步，直到它们相遇，它们相遇的点就是环的入口，返回这个节点。
+
+<img src="https://pic.leetcode-cn.com/99987d4e679fdfbcfd206a4429d9b076b46ad09bd2670f886703fb35ef130635-image.png" style="zoom:50%;" /> 
+
+我们利用已知的条件：慢指针移动 1 步，快指针移动 2 步，来说明它们相遇在环的入口处。（下面证明中的 tortoise 表示慢指针，hare 表示快指针）
+
+![UySDEQ.png](https://s1.ax1x.com/2020/07/17/UySDEQ.png) 
+
+
+
+![UySOKK.gif](https://s1.ax1x.com/2020/07/17/UySOKK.gif) 
 
