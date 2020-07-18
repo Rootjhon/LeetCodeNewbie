@@ -2,51 +2,54 @@
 
 using System.Collections.Generic;
 
-public sealed class MinStack
+namespace leetcode.easy
 {
-    #region [Fields]
-    private Stack<int> _rawStack;
-    private Stack<int> _assistStack;
-    #endregion
-
-    #region [Construct]
-    /** initialize your data structure here. */
-    public MinStack()
+    public sealed class MinStack
     {
-        _rawStack = new Stack<int>();
-        _assistStack = new Stack<int>();
-    }
-    #endregion
+        #region [Fields]
+        private Stack<int> _rawStack;
+        private Stack<int> _assistStack;
+        #endregion
 
-    #region [API]
-    public void Push(int x)
-    {
-        _rawStack.Push(x);
-        if (_assistStack.Count != 0)
+        #region [Construct]
+        /** initialize your data structure here. */
+        public MinStack()
         {
-            var tempMin = _assistStack.Peek();
-            _assistStack.Push(tempMin < x ? tempMin : x);
+            _rawStack = new Stack<int>();
+            _assistStack = new Stack<int>();
         }
-        else
+        #endregion
+
+        #region [API]
+        public void Push(int x)
         {
-            _assistStack.Push(x);
+            _rawStack.Push(x);
+            if (_assistStack.Count != 0)
+            {
+                var tempMin = _assistStack.Peek();
+                _assistStack.Push(tempMin < x ? tempMin : x);
+            }
+            else
+            {
+                _assistStack.Push(x);
+            }
         }
-    }
 
-    public void Pop()
-    {
-        _rawStack.Pop();
-        _assistStack.Pop();
-    }
+        public void Pop()
+        {
+            _rawStack.Pop();
+            _assistStack.Pop();
+        }
 
-    public int Top()
-    {
-        return _rawStack.Peek();
-    }
+        public int Top()
+        {
+            return _rawStack.Peek();
+        }
 
-    public int GetMin()
-    {
-        return _assistStack.Peek();
+        public int GetMin()
+        {
+            return _assistStack.Peek();
+        }
+        #endregion
     }
-    #endregion
 }
