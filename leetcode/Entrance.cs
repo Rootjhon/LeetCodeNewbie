@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using leetcode.easy;
+using leetcode.basics;
 
 namespace leetcode
 {
@@ -16,25 +17,23 @@ namespace leetcode
 
             _watch.Start();
             
-            var tempS = tempP.SearchInsert_v2(new int[]{1,3,5,6},0);
-            Console.WriteLine(tempS);
+            var tempQ = new MyCircularQueue(3);
+            var tempR = tempQ.EnQueue(1);
+            tempR = tempQ.EnQueue(2);
+            tempR = tempQ.EnQueue(3);
+            tempR = tempQ.EnQueue(4);
+            tempQ.Rear();
+            tempQ.IsFull();
+            tempQ.DeQueue();
+            tempQ.EnQueue(4);
+            tempQ.Rear();
+
+            
             _watch.Stop();
 
             Console.WriteLine(_watch.ElapsedMilliseconds);
         }
 
-        public static int binarySearch(int[] nums, int target)
-        {
-            int l = 0, r = nums.Length - 1;
-            while (l <= r)
-            {
-                var mid = l + (r - 1) >> 1;
-
-                if (nums[mid] < target) { l = mid + 1; }
-                if (nums[mid] >= target) { r = mid - 1; }
-            }
-            return l;
-        }
 
     }
 }

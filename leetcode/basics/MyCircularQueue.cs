@@ -29,7 +29,7 @@ namespace leetcode.basics
         /// <returns></returns>
         public int Front()
         {
-            return isEmpty() ? -1 : _queue[_headIdx];
+            return IsEmpty() ? -1 : _queue[_headIdx];
         }
         /// <summary>
         /// 获取队尾元素。如果队列为空，返回 -1;
@@ -37,45 +37,48 @@ namespace leetcode.basics
         /// <returns></returns>
         public int Rear()
         {
-            return isFull() ? -1 : _queue[_tailIdx];
+            return IsEmpty() ? -1 : _queue[_tailIdx];
         }
         /// <summary>
         /// 向循环队列插入一个元素。如果成功插入则返回真;
         /// </summary>
         /// <param name="varVal"></param>
         /// <returns></returns>
-        public bool enQueue(int varVal)
+        public bool EnQueue(int varVal)
         {
-            if (isEmpty()) return false;
-            _queue[++_tailIdx % _queue.Length] = varVal;
+            if (IsFull()) return false;
+            _tailIdx = ++_tailIdx % _queue.Length;
+            if(_headIdx == -1)_headIdx=0;
+            _queue[_tailIdx] = varVal;
             return true;
         }
         /// <summary>
         /// 从循环队列中删除一个元素。如果成功删除则返回真;
         /// </summary>
         /// <returns></returns>
-        public bool deQueue()
+        public bool DeQueue()
         {
-            if (isEmpty()) return false;
-            //++_headIdx % _queue.Length
-            return false;
+            if (IsEmpty()) return false;
+            _headIdx = ++_headIdx % _queue.Length;
+            return true;
         }
         /// <summary>
         /// 检查循环队列是否为空;
         /// </summary>
         /// <returns></returns>
-        public bool isEmpty()
+        public bool IsEmpty()
         {
-            return true;
+            if (_queue == null) return true;
+            return _tailIdx == _headIdx;
         }
         /// <summary>
         /// 检查循环队列是否已满;
         /// </summary>
         /// <returns></returns>
-        public bool isFull()
+        public bool IsFull()
         {
             if (_queue == null) return true;
-            return true;
+            return _tailIdx == _queue.Length ? true : (_tailIdx + 1) % _queue.Length == _headIdx;
         }
         #endregion
     }
