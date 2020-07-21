@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using leetcode.easy;
-using leetcode.basics;
 
 namespace leetcode
 {
@@ -16,19 +15,18 @@ namespace leetcode
             var tempP = new Solution();
 
             _watch.Start();
+            
 
-            tempP.LetterCasePermutation_v1("a1b2");
-
-            var tempQ = new MyCircularQueue(3);
-            var tempR = tempQ.EnQueue(1);
-            tempR = tempQ.EnQueue(2);
-            tempR = tempQ.EnQueue(3);
-            tempR = tempQ.EnQueue(4);
-            tempQ.Rear();
-            tempQ.IsFull();
-            tempQ.DeQueue();
-            tempQ.EnQueue(4);
-            tempQ.Rear();
+            //var tempQ = new MyCircularQueue(3);
+            //var tempR = tempQ.EnQueue(1);
+            //tempR = tempQ.EnQueue(2);
+            //tempR = tempQ.EnQueue(3);
+            //tempR = tempQ.EnQueue(4);
+            //tempQ.Rear();
+            //tempQ.IsFull();
+            //tempQ.DeQueue();
+            //tempQ.EnQueue(4);
+            //tempQ.Rear();
 
             
             _watch.Stop();
