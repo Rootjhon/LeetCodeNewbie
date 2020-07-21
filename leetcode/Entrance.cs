@@ -16,7 +16,9 @@ namespace leetcode
             var tempP = new Solution();
 
             _watch.Start();
-            
+
+            tempP.LetterCasePermutation_v1("a1b2");
+
             var tempQ = new MyCircularQueue(3);
             var tempR = tempQ.EnQueue(1);
             tempR = tempQ.EnQueue(2);
