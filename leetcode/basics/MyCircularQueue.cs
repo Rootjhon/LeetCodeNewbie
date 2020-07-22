@@ -47,8 +47,9 @@ namespace leetcode.basics
         public bool EnQueue(int varVal)
         {
             if (IsFull()) return false;
+            if (IsEmpty()) _headIdx = 0;
+
             _tailIdx = ++_tailIdx % _queue.Length;
-            if(_headIdx == -1)_headIdx=0;
             _queue[_tailIdx] = varVal;
             return true;
         }
@@ -59,6 +60,13 @@ namespace leetcode.basics
         public bool DeQueue()
         {
             if (IsEmpty()) return false;
+
+            if (_headIdx == _tailIdx)
+            {
+                _headIdx = _tailIdx = -1;
+                return true;
+            }
+
             _headIdx = ++_headIdx % _queue.Length;
             return true;
         }
@@ -68,8 +76,7 @@ namespace leetcode.basics
         /// <returns></returns>
         public bool IsEmpty()
         {
-            if (_queue == null) return true;
-            return _tailIdx == _headIdx;
+            return _headIdx == -1;
         }
         /// <summary>
         /// 检查循环队列是否已满;
@@ -78,7 +85,7 @@ namespace leetcode.basics
         public bool IsFull()
         {
             if (_queue == null) return true;
-            return _tailIdx == _queue.Length ? true : (_tailIdx + 1) % _queue.Length == _headIdx;
+            return (_tailIdx + 1) % _queue.Length == _headIdx;
         }
         #endregion
     }
