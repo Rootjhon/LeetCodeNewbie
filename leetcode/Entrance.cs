@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using leetcode.easy;
+//using leetcode.easy;
 using leetcode.basics;
 
 namespace leetcode
@@ -17,12 +17,43 @@ namespace leetcode
 
             _watch.Start();
 
+            var tempStore = new BinaryStore();
+
+            var tempR = tempStore.ContainType(1);
+
+            tempStore.StoreType(1);
+            tempR = tempStore.ContainType(1);
+
+            tempStore.StoreType(2);
+            tempR = tempStore.ContainType(1);
+            tempR = tempStore.ContainType(2);
+            tempR = tempStore.ContainType(3);
+
+            tempStore.DeleteStoreType(1);
+            tempR = tempStore.ContainType(2);
+            tempR = tempStore.ContainType(1);
+
+            tempStore.DeleteStoreType(2);
+            tempR = tempStore.ContainType(2);
+            tempR = tempStore.ContainType(1);
+
+
+            tempStore.DeleteStoreType(2);
+            tempR = tempStore.ContainType(2);
+
+            tempR = tempStore.ContainType(3);
+
 
             var tempQ = new MyCircularQueue(6);
             tempQ.EnQueue(6);
-            tempR = tempQ.EnQueue(2);
-            tempR = tempQ.EnQueue(3);
-            tempR = tempQ.EnQueue(4);
+            tempQ.Rear();
+            tempQ.Rear();
+            tempQ.DeQueue();
+            tempQ.Rear();
+            tempQ.DeQueue();
+            tempQ.Front();
+            tempQ.DeQueue();
+
             tempQ.Rear();
             tempQ.IsFull();
             tempQ.DeQueue();
