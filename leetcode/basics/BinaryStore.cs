@@ -18,14 +18,9 @@
             _StoreBucket = _StoreBucket | (1 << varVal);
         }
 
-        public bool DeleteStoreType(int varVal)
+        public void DeleteStoreType(int varVal)
         {
-            if (ContainType(varVal))
-            {
-                _StoreBucket = _StoreBucket ^ (1 << varVal);
-                return true;
-            }
-            return false;
+            _StoreBucket = _StoreBucket & ~(1 << varVal);
         }
         #endregion
     }
